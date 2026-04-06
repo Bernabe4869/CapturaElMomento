@@ -1,86 +1,109 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = 'Captura el Momento | Comparte las fotos de tu evento con un QR';
+const pageTitle = 'Recoge fotos de invitados para bodas y eventos con QR | Captura el Momento';
 const pageDescription =
-	'Crea un album colaborativo para bodas, fiestas y cumpleaños. Comparte un QR, recibe todas las fotos de tus invitados y pruebalo gratis hasta julio.';
+	'Recopila fotos de invitados en bodas y eventos con un album compartido y un QR. Tus invitados pueden subir fotos desde el movil, sin instalar app complicada.';
 
 const steps = [
 	{
-		title: 'Crea tu evento en minutos',
+		title: 'Crea tu album compartido',
 		description:
-			'Configura el nombre del evento, personaliza la portada y genera un espacio privado para reunir todas las fotos.',
+			'Prepara el evento en pocos minutos, personaliza la portada y deja listo un espacio unico para recopilar recuerdos.',
 	},
 	{
-		title: 'Comparte un QR con tus invitados',
+		title: 'Comparte el QR con tus invitados',
 		description:
-			'Imprime el codigo en mesas, invitaciones o pantallas para que cualquiera pueda entrar sin descargar nada complicado.',
+			'Coloca el QR en mesas, invitaciones o pantallas para que cualquier persona pueda entrar desde el movil en segundos.',
 	},
 	{
-		title: 'Recibe recuerdos al instante',
+		title: 'Recibe fotos durante todo el evento',
 		description:
-			'Cada invitado sube sus fotos desde el movil y el album se llena en tiempo real con todos los momentos que normalmente se pierden.',
+			'Cada invitado puede subir fotos desde el movil al instante y el album se completa con momentos reales de la celebracion.',
 	},
 ];
 
-const benefits = [
+const eventTypes = [
 	{
-		title: 'Mas fotos, menos esfuerzo',
+		title: 'Bodas',
 		description:
-			'Consigue fotos desde todos los angulos sin perseguir a nadie por WhatsApp despues del evento.',
+			'Ideal para recoger fotos de los invitados de una boda y sumar miradas espontaneas al album del gran dia.',
 	},
 	{
-		title: 'Ideal para bodas y celebraciones',
+		title: 'Cumpleanos y fiestas privadas',
 		description:
-			'Funciona especialmente bien en bodas, cumpleaños, comuniones, baby showers y fiestas privadas.',
+			'Convierte cualquier celebracion en un album compartido facil de usar para amigos, familia y anfitriones.',
 	},
 	{
-		title: 'Acceso rapido por QR',
+		title: 'Comuniones, bautizos y eventos familiares',
 		description:
-			'Los invitados entran con una experiencia simple y movil, sin registros eternos ni instrucciones confusas.',
+			'Una forma simple de recopilar recuerdos sin perseguir fotos despues ni depender de varios chats.',
 	},
 	{
-		title: 'Album compartido y ordenado',
+		title: 'Eventos de empresa y celebraciones de equipo',
 		description:
-			'Todo queda centralizado en un mismo lugar para descargar, revisar y conservar los mejores recuerdos.',
+			'Reune fotos de asistentes, equipo y organizacion en un solo sitio con acceso rapido mediante QR.',
 	},
 	{
-		title: 'Listo para eventos reales',
+		title: 'Baby showers y despedidas',
 		description:
-			'Pensado para anfitriones y organizadores que quieren una solucion visual, elegante y facil de explicar.',
+			'Perfecto para eventos donde cada invitado captura momentos distintos y quieres conservarlos todos.',
 	},
 	{
-		title: 'Gratis hasta julio',
+		title: 'Cualquier evento con invitados',
 		description:
-			'Aprovecha la etapa de lanzamiento para usar Captura el Momento sin coste hasta el 31 de julio de 2026.',
+			'Si necesitas recopilar recuerdos en un solo lugar, el flujo funciona igual de bien en eventos pequenos o grandes.',
+	},
+];
+
+const comparisonItems = [
+	{
+		title: 'Frente a WhatsApp',
+		description:
+			'Evitas fotos perdidas entre mensajes, compresion de archivos y la tarea de ir rescatando imagenes una por una.',
+	},
+	{
+		title: 'Frente a carpetas dispersas',
+		description:
+			'No dependes de enlaces distintos, permisos confusos ni varias carpetas separadas para un mismo evento.',
+	},
+	{
+		title: 'Frente a pedir fotos despues',
+		description:
+			'Recoges mas contenido porque los invitados comparten en el momento, cuando todavia tienen las fotos a mano.',
 	},
 ];
 
 const faqItems = [
 	{
-		question: 'Que es Captura el Momento?',
+		question: 'Como puedo recoger fotos de los invitados de una boda con un QR?',
 		answer:
-			'Es una app para recopilar fotos de eventos mediante un codigo QR. Los invitados escanean, suben sus imagenes y todas quedan reunidas en un mismo album digital.',
+			'Creas el evento, generas un QR y lo compartes en la boda. Los invitados lo escanean y pueden subir fotos desde el movil al album compartido en pocos pasos.',
 	},
 	{
-		question: 'Mis invitados tienen que instalar una app?',
+		question: 'Los invitados tienen que instalar una app para subir fotos?',
 		answer:
-			'No. La experiencia esta pensada para que puedan acceder desde el movil de forma rapida y sencilla a traves del QR del evento.',
+			'No. Captura el Momento esta pensado para que cualquier invitado pueda acceder desde el navegador del movil, sin instalar app complicada ni seguir instrucciones largas.',
 	},
 	{
-		question: 'Para que tipo de eventos sirve?',
+		question: 'Sirve solo para bodas o tambien para otros eventos?',
 		answer:
-			'Esta enfocada en bodas, fiestas, cumpleaños y celebraciones donde quieres reunir recuerdos de todos los asistentes sin complicaciones.',
+			'Funciona muy bien en bodas, pero tambien en cumpleanos, comuniones, bautizos, baby showers, fiestas privadas y eventos de empresa donde quieras recopilar fotos de invitados.',
 	},
 	{
-		question: 'Cuanto cuesta?',
+		question: 'Que ventajas tiene frente a pedir fotos por WhatsApp?',
 		answer:
-			'Ahora mismo es gratuita hasta el 31 de julio de 2026. Es una oportunidad ideal para probarla en tus proximos eventos y validar el formato.',
+			'Con un album compartido por QR tienes todas las fotos del evento en un mismo lugar, sin chats caoticos, archivos mezclados ni mensajes que se pierden con el tiempo.',
 	},
 	{
-		question: 'Que ventaja tiene frente a pedir fotos por chat?',
+		question: 'Por que es mejor pedir las fotos durante el evento y no dias despues?',
 		answer:
-			'Evita mensajes dispersos, perdida de archivos y conversaciones interminables. Todas las fotos se centralizan en un unico espacio preparado para el evento.',
+			'Durante el evento los invitados ya tienen el movil en la mano y recuerdan compartir. Si esperas a despues, muchas fotos no llegan, se olvidan o quedan repartidas en varias conversaciones y carpetas.',
+	},
+	{
+		question: 'Que tipo de recuerdos puedo recopilar en el album?',
+		answer:
+			'Puedes reunir fotos de invitados, momentos espontaneos, detalles de decoracion, pista de baile, mesas, ceremonia y cualquier imagen que ayude a reconstruir el evento desde muchas perspectivas.',
 	},
 ];
 
@@ -103,18 +126,45 @@ const softwareSchema = {
 	name: 'Captura el Momento',
 	applicationCategory: 'PhotoApplication',
 	operatingSystem: 'Web',
+	url: 'https://capturaelmomento.com/',
 	description: pageDescription,
-	offers: {
-		'@type': 'Offer',
-		price: '0',
-		priceCurrency: 'EUR',
-		availability: 'https://schema.org/InStock',
-		description: 'Gratis hasta el 31 de julio de 2026',
-	},
+	inLanguage: 'es',
+	featureList: [
+		'Album compartido para bodas y eventos',
+		'Acceso mediante QR',
+		'Subir fotos desde el movil',
+		'Sin instalar app complicada',
+		'Recopilar fotos de invitados en un solo lugar',
+	],
 	audience: {
 		'@type': 'Audience',
-		audienceType: 'Personas que organizan bodas, fiestas y cumpleaños',
+		audienceType: 'Parejas, anfitriones y personas que organizan eventos',
 	},
+	producer: {
+		'@type': 'Organization',
+		name: 'Captura el Momento',
+		url: 'https://capturaelmomento.com/',
+	},
+};
+
+const organizationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: 'Captura el Momento',
+	url: 'https://capturaelmomento.com/',
+	logo: 'https://capturaelmomento.com/favicon.png',
+	description:
+		'Software para recopilar fotos de invitados en bodas y eventos mediante un album compartido con QR.',
+};
+
+const websiteSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: 'Captura el Momento',
+	url: 'https://capturaelmomento.com/',
+	inLanguage: 'es',
+	description:
+		'Sitio web para crear albumes compartidos y recoger fotos de invitados en bodas y eventos con un QR.',
 };
 ---
 
@@ -122,38 +172,41 @@ const softwareSchema = {
 	title={pageTitle}
 	description={pageDescription}
 	canonical="/"
-	structuredData={[faqSchema, softwareSchema]}
+	structuredData={[softwareSchema, faqSchema, organizationSchema, websiteSchema]}
 >
 	<main>
 		<section class="hero section" id="hero-top">
 			<div class="container hero-grid">
 				<div class="hero-copy">
-					<span class="eyebrow">Gratis hasta julio de 2026</span>
-					<h1>Centraliza las fotos de tu evento con un QR simple de compartir.</h1>
-					<p>
-						Captura el Momento convierte bodas, fiestas y cumpleaños en albumes colaborativos.
-						Crea el evento, comparte un QR o enlace y recibe fotos de tus invitados en un panel
-						claro, bonito y pensado para usarlo de verdad.
+					<span class="eyebrow">Album compartido con QR para bodas y eventos</span>
+					<h1>Recoge las fotos de tus invitados con un QR y guardalas en un solo album compartido.</h1>
+					<p class="hero-lead">
+						Captura el Momento te ayuda a recopilar recuerdos de una boda o cualquier evento sin
+						chats caoticos, sin carpetas dispersas y sin instalar app complicada.
+					</p>
+					<p class="hero-support">
+						Tus invitados pueden subir fotos desde el movil en segundos, mientras tu mantienes todo
+						ordenado, accesible y listo para revivir despues.
 					</p>
 					<div class="hero-actions">
-						<a class="btn btn-primary" href="https://app.capturaelmomento.com">Empezar gratis</a>
+						<a class="btn btn-primary" href="https://app.capturaelmomento.com">Crear mi evento</a>
 						<a class="btn btn-secondary" href="#como-funciona">Ver como funciona</a>
 					</div>
 					<ul class="hero-proof" aria-label="Ventajas principales">
-						<li>Sin procesos complicados para tus invitados</li>
-						<li>Perfecto para bodas, cumpleaños y fiestas</li>
-						<li>Album colaborativo centralizado</li>
+						<li>Fotos de invitados centralizadas</li>
+						<li>Subida rapida desde movil con QR</li>
+						<li>Experiencia simple y elegante</li>
 					</ul>
 				</div>
 				<div class="hero-panel card">
 					<div class="hero-panel-top">
-						<p class="panel-label">Evento activo</p>
-						<strong>Panel del evento</strong>
+						<p class="panel-label">Vista del evento</p>
+						<strong>Album activo y listo para compartir</strong>
 					</div>
 					<div class="phone-frame">
-						<div class="qr-badge">QR + enlace listos para compartir</div>
+						<div class="qr-badge">QR + enlace listos para tus invitados</div>
 						<div class="upload-card">
-							<span>Fotos subidas</span>
+							<span>Fotos de invitados</span>
 							<strong>11</strong>
 						</div>
 						<div class="photo-stack" aria-hidden="true">
@@ -165,12 +218,12 @@ const softwareSchema = {
 					</div>
 					<div class="stats-grid">
 						<div>
-							<span>Evento activo</span>
-							<strong>1</strong>
+							<span>Album compartido</span>
+							<strong>Activo</strong>
 						</div>
 						<div>
-							<span>Listo para invitados</span>
-							<strong>Si</strong>
+							<span>Acceso para invitados</span>
+							<strong>Por QR</strong>
 						</div>
 					</div>
 				</div>
@@ -181,10 +234,10 @@ const softwareSchema = {
 			<div class="container">
 				<div class="section-heading">
 					<span class="eyebrow">Como funciona</span>
-					<h2>Una experiencia simple para ti y natural para tus invitados.</h2>
+					<h2>Como recopilar fotos de invitados sin complicar a nadie.</h2>
 					<p>
-						No necesitas grupos caoticos ni pedir fotos despues. La propuesta esta pensada para que
-						cualquier invitado entre, suba imagenes y las deje ordenadas en el mismo sitio.
+						El proceso esta pensado para convertir una accion que suele ser caotica en una
+						experiencia clara: crear, compartir y recibir fotos del evento en un mismo lugar.
 					</p>
 				</div>
 
@@ -202,23 +255,48 @@ const softwareSchema = {
 			</div>
 		</section>
 
-		<section class="section benefits-section" id="beneficios">
+		<section class="section seo-wedding-section" id="bodas">
+			<div class="container wedding-layout">
+				<div class="section-heading">
+					<span class="eyebrow">Especial bodas</span>
+					<h2>Recoger fotos de los invitados de una boda sin perseguir a nadie despues.</h2>
+					<p>
+						En muchas bodas pasa lo mismo: los novios saben que hay fotos preciosas en los moviles de
+						los invitados, pero pedirlas una a una por WhatsApp resulta lento, incomodo y poco
+						efectivo.
+					</p>
+				</div>
+				<div class="card wedding-card">
+					<p>
+						Con Captura el Momento, compartes un QR durante la boda y cada invitado puede subir fotos
+						desde el movil al momento. Asi consigues un album compartido mas completo, con momentos
+						espontaneos que normalmente no llegan al final.
+					</p>
+					<p>
+						La ventaja no es solo tecnica. Tambien mejora la experiencia: menos mensajes despues del
+						evento, menos archivos desperdigados y una forma mas natural de recopilar recuerdos del dia.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section events-section" id="eventos">
 			<div class="container">
 				<div class="section-heading">
-					<span class="eyebrow">Beneficios</span>
-					<h2>Hecha para eventos donde cada foto cuenta.</h2>
+					<span class="eyebrow">Para que eventos sirve</span>
+					<h2>Una solucion pensada para bodas, celebraciones y eventos donde cada invitado aporta recuerdos.</h2>
 					<p>
-						Desde la perspectiva de los anfitriones hasta la comodidad de los invitados, todo esta
-						pensado para aumentar la participacion y conservar mejores recuerdos.
+						Si hay personas haciendo fotos con su movil, hay una oportunidad clara de reunir esos
+						momentos en un album compartido bien organizado.
 					</p>
 				</div>
 
 				<div class="grid benefits-grid">
 					{
-						benefits.map((benefit) => (
+						eventTypes.map((eventType) => (
 							<article class="card benefit-card">
-								<h3>{benefit.title}</h3>
-								<p>{benefit.description}</p>
+								<h3>{eventType.title}</h3>
+								<p>{eventType.description}</p>
 							</article>
 						))
 					}
@@ -226,37 +304,42 @@ const softwareSchema = {
 			</div>
 		</section>
 
-		<section class="section pricing-section" id="precios">
+		<section class="section compare-section" id="ventajas">
 			<div class="container">
 				<div class="section-heading">
-					<span class="eyebrow">Precios</span>
-					<h2>Lanzamiento abierto para que pruebes la experiencia en eventos reales.</h2>
+					<span class="eyebrow">Ventajas frente a pedir fotos por WhatsApp</span>
+					<h2>Mas orden, mas participacion y menos friccion antes, durante y despues del evento.</h2>
 					<p>
-						La mejor forma de descubrir su valor es usarla en una celebracion de verdad. Por eso
-						Captura el Momento sera gratuita hasta julio.
+						Cuando facilitas el acceso con un QR y un flujo simple, recopilar recuerdos deja de ser
+						una tarea pendiente y pasa a formar parte natural del evento.
 					</p>
 				</div>
 
-				<div class="pricing-card card">
+				<div class="grid comparison-grid">
+					{
+						comparisonItems.map((item) => (
+							<article class="card comparison-card">
+								<h3>{item.title}</h3>
+								<p>{item.description}</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="section promo-section" id="promo">
+			<div class="container">
+				<div class="promo-banner card">
 					<div>
-						<p class="pricing-kicker">Plan lanzamiento</p>
-						<h3>Gratis hasta el 31 de julio de 2026</h3>
+						<p class="pricing-kicker">Promocion de lanzamiento</p>
+						<h2>Pruebalo en tu proximo evento con acceso promocional.</h2>
 						<p>
-							Crea tu evento, comparte el QR y empieza a reunir fotos sin coste durante la fase de
-							lanzamiento.
+							La propuesta principal de la pagina ya es evergreen. Si quieres aprovechar la etapa de
+							lanzamiento, puedes empezar ahora y validar la experiencia en un evento real.
 						</p>
 					</div>
-					<div class="price-tag">
-						<span>0 EUR</span>
-						<small>Acceso promocional</small>
-					</div>
-					<ul class="pricing-list">
-						<li>Creacion de eventos y album colaborativo</li>
-						<li>Acceso mediante QR para invitados</li>
-						<li>Ideal para bodas, fiestas y cumpleaños</li>
-						<li>Sin permanencia durante el periodo gratuito</li>
-					</ul>
-					<a class="btn btn-primary" href="https://app.capturaelmomento.com">Quiero probarla en mi evento</a>
+					<a class="btn btn-primary" href="https://app.capturaelmomento.com">Quiero probarla</a>
 				</div>
 			</div>
 		</section>
@@ -264,11 +347,11 @@ const softwareSchema = {
 		<section class="section faq-section" id="faq">
 			<div class="container faq-layout">
 				<div class="section-heading">
-					<span class="eyebrow">FAQ</span>
-					<h2>Resuelve las dudas antes de lanzar el QR en tu evento.</h2>
+					<span class="eyebrow">Preguntas frecuentes</span>
+					<h2>Respuestas claras sobre albumes compartidos con QR para bodas y eventos.</h2>
 					<p>
-						Esta seccion esta estructurada para que tus visitantes y los buscadores entiendan rapido
-						que hace la app, para quien es y por que merece probarla.
+						Esta FAQ ayuda a resolver dudas reales de quienes buscan una forma simple de recopilar
+						fotos de invitados y, ademas, refuerza la comprension semantica de la pagina.
 					</p>
 				</div>
 				<div class="faq-list">
@@ -288,11 +371,11 @@ const softwareSchema = {
 			<div class="container">
 				<div class="card cta-card">
 					<div>
-						<span class="eyebrow">Preparado para convertir invitados en fotografos</span>
-						<h2>Haz que cada mesa, brindis y baile termine tambien en tu album.</h2>
+						<span class="eyebrow">Listo para recopilar recuerdos mejor</span>
+						<h2>Haz que las fotos de tus invitados terminen donde deben: en tu album compartido.</h2>
 						<p>
-							Prueba Captura el Momento gratis hasta julio de 2026 y crea una experiencia facil de
-							compartir, bonita de presentar y muy simple de usar.
+							Crea tu evento, comparte el QR y deja que cada persona suba fotos desde el movil de
+							forma natural, sin friccion y sin perder momentos valiosos.
 						</p>
 					</div>
 					<div class="cta-actions">
@@ -308,12 +391,13 @@ const softwareSchema = {
 		<div class="container footer-content">
 			<div>
 				<a class="footer-brand" href="/">Captura el Momento</a>
-				<p>Comparte un QR y reune todas las fotos de tu evento en un mismo lugar.</p>
+				<p>Recopila fotos de invitados en bodas y eventos con un QR y un album compartido.</p>
 			</div>
 			<nav aria-label="Navegacion secundaria" class="footer-nav">
 				<a href="#como-funciona">Como funciona</a>
-				<a href="#beneficios">Beneficios</a>
-				<a href="#precios">Precios</a>
+				<a href="#bodas">Bodas</a>
+				<a href="#eventos">Eventos</a>
+				<a href="#ventajas">Ventajas</a>
 				<a href="#faq">FAQ</a>
 			</nav>
 		</div>
@@ -335,8 +419,8 @@ const softwareSchema = {
 	.hero-copy h1 {
 		margin: 1rem 0 1rem;
 		font-family: 'Plus Jakarta Sans', sans-serif;
-		font-size: clamp(3rem, 6vw, 5.4rem);
-		line-height: 0.95;
+		font-size: clamp(3rem, 6vw, 5.2rem);
+		line-height: 0.96;
 		letter-spacing: -0.04em;
 		max-width: 11ch;
 	}
@@ -344,9 +428,17 @@ const softwareSchema = {
 	.hero-copy p {
 		max-width: 60ch;
 		margin: 0;
-		font-size: 1.12rem;
+		font-size: 1.06rem;
 		line-height: 1.8;
 		color: var(--muted);
+	}
+
+	.hero-lead {
+		font-size: 1.14rem;
+	}
+
+	.hero-support {
+		margin-top: 0.9rem;
 	}
 
 	.hero-actions {
@@ -503,11 +595,13 @@ const softwareSchema = {
 	}
 
 	.stats-grid span,
-	.pricing-card p,
+	.promo-banner p,
 	.faq-item p,
 	.site-footer p,
 	.step-card p,
-	.benefit-card p {
+	.benefit-card p,
+	.comparison-card p,
+	.wedding-card p {
 		color: var(--muted);
 		line-height: 1.7;
 	}
@@ -524,8 +618,13 @@ const softwareSchema = {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	.comparison-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
 	.step-card,
-	.benefit-card {
+	.benefit-card,
+	.comparison-card {
 		padding: 1.6rem;
 	}
 
@@ -542,68 +641,35 @@ const softwareSchema = {
 
 	.step-card h3,
 	.benefit-card h3,
-	.pricing-card h3 {
+	.comparison-card h3,
+	.promo-banner h2 {
 		margin: 0 0 0.7rem;
 		font-family: 'Plus Jakarta Sans', sans-serif;
 		font-size: 1.4rem;
 	}
 
-	.benefits-section {
+	.events-section,
+	.compare-section {
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
 	}
 
-	.pricing-card {
+	.wedding-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.wedding-card,
+	.promo-banner {
 		padding: 2rem;
+	}
+
+	.promo-banner {
 		display: grid;
 		grid-template-columns: minmax(0, 1.2fr) auto;
 		gap: 1.5rem 2rem;
 		align-items: center;
-	}
-
-	.price-tag {
-		min-width: 210px;
-		padding: 1.25rem;
-		border-radius: 24px;
-		background: linear-gradient(135deg, #1d2939 0%, #2f67f6 100%);
-		color: #fff;
-		text-align: center;
-	}
-
-	.price-tag span {
-		display: block;
-		font-family: 'Plus Jakarta Sans', sans-serif;
-		font-size: 2.35rem;
-		font-weight: 800;
-	}
-
-	.price-tag small {
-		opacity: 0.8;
-	}
-
-	.pricing-list {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0.8rem 1rem;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
-
-	.pricing-list li {
-		padding-left: 1.2rem;
-		position: relative;
-		font-weight: 700;
-	}
-
-	.pricing-list li::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0.55rem;
-		width: 0.5rem;
-		height: 0.5rem;
-		border-radius: 50%;
-		background: var(--primary);
 	}
 
 	.faq-layout {
@@ -702,15 +768,16 @@ const softwareSchema = {
 
 	@media (max-width: 960px) {
 		.hero-grid,
+		.wedding-layout,
 		.faq-layout,
 		.cta-card,
-		.pricing-card {
+		.promo-banner {
 			grid-template-columns: 1fr;
 		}
 
 		.steps-grid,
 		.benefits-grid,
-		.pricing-list {
+		.comparison-grid {
 			grid-template-columns: 1fr 1fr;
 		}
 
@@ -726,7 +793,7 @@ const softwareSchema = {
 
 		.steps-grid,
 		.benefits-grid,
-		.pricing-list,
+		.comparison-grid,
 		.stats-grid {
 			grid-template-columns: 1fr;
 		}
