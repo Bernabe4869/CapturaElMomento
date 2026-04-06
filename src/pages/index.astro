@@ -1,58 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = 'Recoge fotos de invitados para bodas y eventos con QR | Captura el Momento';
+const pageTitle = 'App para recopilar fotos de boda y eventos con QR | Captura el Momento';
 const pageDescription =
-	'Recopila fotos de invitados en bodas y eventos con un album compartido y un QR. Tus invitados pueden subir fotos desde el movil, sin instalar app complicada.';
+	'Recopila fotos de invitados en bodas y eventos con un álbum compartido y un QR. Tus invitados pueden subir fotos desde el móvil, sin instalar una app complicada.';
 
 const steps = [
 	{
-		title: 'Crea tu album compartido',
+		title: 'Crea tu evento y deja listo el álbum',
 		description:
-			'Prepara el evento en pocos minutos, personaliza la portada y deja listo un espacio unico para recopilar recuerdos.',
+			'Configura el nombre, prepara la portada y crea un álbum digital pensado para recopilar fotos en un solo lugar.',
 	},
 	{
-		title: 'Comparte el QR con tus invitados',
+		title: 'Comparte el QR o el enlace',
 		description:
-			'Coloca el QR en mesas, invitaciones o pantallas para que cualquier persona pueda entrar desde el movil en segundos.',
+			'Colócalo en mesas, invitaciones o pantallas para que cualquier invitado pueda acceder desde el móvil en segundos.',
 	},
 	{
-		title: 'Recibe fotos durante todo el evento',
+		title: 'Recibe fotos durante el evento',
 		description:
-			'Cada invitado puede subir fotos desde el movil al instante y el album se completa con momentos reales de la celebracion.',
+			'Los invitados suben fotos desde el móvil mientras todo ocurre y el álbum compartido se va llenando con recuerdos reales del evento.',
 	},
 ];
 
-const eventTypes = [
+const benefits = [
 	{
-		title: 'Bodas',
+		title: 'Más fotos de invitados, con menos esfuerzo',
 		description:
-			'Ideal para recoger fotos de los invitados de una boda y sumar miradas espontaneas al album del gran dia.',
+			'Recibes momentos espontáneos que normalmente se pierden cuando las fotos se quedan en móviles ajenos.',
 	},
 	{
-		title: 'Cumpleanos y fiestas privadas',
+		title: 'Sin instalar una app complicada',
 		description:
-			'Convierte cualquier celebracion en un album compartido facil de usar para amigos, familia y anfitriones.',
+			'El acceso está pensado para ser simple, rápido y natural incluso para invitados poco tecnológicos.',
 	},
 	{
-		title: 'Comuniones, bautizos y eventos familiares',
+		title: 'Todo ordenado en un solo álbum compartido',
 		description:
-			'Una forma simple de recopilar recuerdos sin perseguir fotos despues ni depender de varios chats.',
+			'Evitas fotos dispersas, enlaces distintos y conversaciones interminables para reunir recuerdos después.',
+	},
+];
+
+const privateEventTypes = [
+	{
+		title: 'Cumpleaños',
+		description:
+			'Una forma sencilla de reunir fotos de amigos y familia sin depender de varios chats ni pedirlas días después.',
 	},
 	{
-		title: 'Eventos de empresa y celebraciones de equipo',
+		title: 'Fiestas privadas',
 		description:
-			'Reune fotos de asistentes, equipo y organizacion en un solo sitio con acceso rapido mediante QR.',
+			'Ideal para celebraciones donde muchas personas hacen fotos y quieres conservarlas en un único álbum digital.',
 	},
 	{
-		title: 'Baby showers y despedidas',
+		title: 'Comuniones y celebraciones familiares',
 		description:
-			'Perfecto para eventos donde cada invitado captura momentos distintos y quieres conservarlos todos.',
-	},
-	{
-		title: 'Cualquier evento con invitados',
-		description:
-			'Si necesitas recopilar recuerdos en un solo lugar, el flujo funciona igual de bien en eventos pequenos o grandes.',
+			'Te ayuda a recopilar fotos de invitados y momentos importantes sin perder tiempo organizando carpetas más tarde.',
 	},
 ];
 
@@ -60,50 +63,50 @@ const comparisonItems = [
 	{
 		title: 'Frente a WhatsApp',
 		description:
-			'Evitas fotos perdidas entre mensajes, compresion de archivos y la tarea de ir rescatando imagenes una por una.',
+			'Evitas la compresión de imágenes, los mensajes perdidos y la tarea de rescatar fotos una por una entre conversaciones.',
 	},
 	{
-		title: 'Frente a carpetas dispersas',
+		title: 'Frente a carpetas compartidas dispersas',
 		description:
-			'No dependes de enlaces distintos, permisos confusos ni varias carpetas separadas para un mismo evento.',
+			'No dependes de varios enlaces, permisos confusos o carpetas separadas para un mismo evento.',
 	},
 	{
-		title: 'Frente a pedir fotos despues',
+		title: 'Frente a pedir fotos después',
 		description:
-			'Recoges mas contenido porque los invitados comparten en el momento, cuando todavia tienen las fotos a mano.',
+			'Recoges más contenido porque el invitado comparte cuando ya tiene el móvil en la mano y el momento todavía está presente.',
 	},
 ];
 
 const faqItems = [
 	{
-		question: 'Como puedo recoger fotos de los invitados de una boda con un QR?',
+		question: '¿Cómo recopilar las fotos de los invitados en una boda?',
 		answer:
-			'Creas el evento, generas un QR y lo compartes en la boda. Los invitados lo escanean y pueden subir fotos desde el movil al album compartido en pocos pasos.',
+			'La forma más sencilla es compartir un QR durante la boda para que cada invitado pueda entrar al álbum y subir sus fotos desde el móvil en el momento.',
 	},
 	{
-		question: 'Los invitados tienen que instalar una app para subir fotos?',
+		question: '¿Hace falta instalar una app para subir fotos?',
 		answer:
-			'No. Captura el Momento esta pensado para que cualquier invitado pueda acceder desde el navegador del movil, sin instalar app complicada ni seguir instrucciones largas.',
+			'No. Captura el Momento está pensado para que los invitados accedan desde el navegador del móvil, sin instalar una app complicada ni seguir pasos largos.',
 	},
 	{
-		question: 'Sirve solo para bodas o tambien para otros eventos?',
+		question: '¿Cómo compartir un álbum de fotos por QR en un evento?',
 		answer:
-			'Funciona muy bien en bodas, pero tambien en cumpleanos, comuniones, bautizos, baby showers, fiestas privadas y eventos de empresa donde quieras recopilar fotos de invitados.',
+			'Creas el evento, generas el QR y lo compartes en mesas, carteles, invitaciones o pantallas. Los invitados lo escanean y pueden subir fotos al álbum compartido.',
 	},
 	{
-		question: 'Que ventajas tiene frente a pedir fotos por WhatsApp?',
+		question: '¿Qué alternativa hay a pedir fotos por WhatsApp?',
 		answer:
-			'Con un album compartido por QR tienes todas las fotos del evento en un mismo lugar, sin chats caoticos, archivos mezclados ni mensajes que se pierden con el tiempo.',
+			'Un álbum compartido con QR es una alternativa mucho más ordenada. Reúne todas las fotos del evento en un solo lugar y evita chats caóticos y archivos mezclados.',
 	},
 	{
-		question: 'Por que es mejor pedir las fotos durante el evento y no dias despues?',
+		question: '¿Sirve para cumpleaños, comuniones o fiestas?',
 		answer:
-			'Durante el evento los invitados ya tienen el movil en la mano y recuerdan compartir. Si esperas a despues, muchas fotos no llegan, se olvidan o quedan repartidas en varias conversaciones y carpetas.',
+			'Sí. Aunque tiene un gran encaje en bodas, también funciona muy bien para cumpleaños, comuniones, fiestas privadas y otras celebraciones con invitados.',
 	},
 	{
-		question: 'Que tipo de recuerdos puedo recopilar en el album?',
+		question: '¿Puedo reunir todas las fotos en un solo álbum digital?',
 		answer:
-			'Puedes reunir fotos de invitados, momentos espontaneos, detalles de decoracion, pista de baile, mesas, ceremonia y cualquier imagen que ayude a reconstruir el evento desde muchas perspectivas.',
+			'Sí. La idea es precisamente recopilar recuerdos del evento en un único álbum digital para que no queden repartidos entre móviles, chats y carpetas.',
 	},
 ];
 
@@ -128,12 +131,12 @@ const softwareSchema = {
 	operatingSystem: 'Web',
 	url: 'https://capturaelmomento.com/',
 	description: pageDescription,
-	inLanguage: 'es',
+	inLanguage: 'es-ES',
 	featureList: [
-		'Album compartido para bodas y eventos',
-		'Acceso mediante QR',
-		'Subir fotos desde el movil',
-		'Sin instalar app complicada',
+		'Álbum compartido para bodas y eventos',
+		'Acceso mediante QR o enlace',
+		'Subida de fotos desde el móvil',
+		'Sin instalar una app complicada',
 		'Recopilar fotos de invitados en un solo lugar',
 	],
 	audience: {
@@ -154,7 +157,7 @@ const organizationSchema = {
 	url: 'https://capturaelmomento.com/',
 	logo: 'https://capturaelmomento.com/favicon.png',
 	description:
-		'Software para recopilar fotos de invitados en bodas y eventos mediante un album compartido con QR.',
+		'Software para recopilar fotos de invitados en bodas y eventos mediante un álbum compartido con QR.',
 };
 
 const websiteSchema = {
@@ -162,9 +165,9 @@ const websiteSchema = {
 	'@type': 'WebSite',
 	name: 'Captura el Momento',
 	url: 'https://capturaelmomento.com/',
-	inLanguage: 'es',
+	inLanguage: 'es-ES',
 	description:
-		'Sitio web para crear albumes compartidos y recoger fotos de invitados en bodas y eventos con un QR.',
+		'Sitio web para crear álbumes compartidos y recoger fotos de invitados en bodas y eventos con un QR.',
 };
 ---
 
@@ -174,70 +177,73 @@ const websiteSchema = {
 	canonical="/"
 	structuredData={[softwareSchema, faqSchema, organizationSchema, websiteSchema]}
 >
-	<main>
-		<section class="hero section" id="hero-top">
-			<div class="container hero-grid">
-				<div class="hero-copy">
-					<span class="eyebrow">Album compartido con QR para bodas y eventos</span>
-					<h1>Recoge las fotos de tus invitados con un QR y guardalas en un solo album compartido.</h1>
-					<p class="hero-lead">
-						Captura el Momento te ayuda a recopilar recuerdos de una boda o cualquier evento sin
-						chats caoticos, sin carpetas dispersas y sin instalar app complicada.
-					</p>
-					<p class="hero-support">
-						Tus invitados pueden subir fotos desde el movil en segundos, mientras tu mantienes todo
-						ordenado, accesible y listo para revivir despues.
-					</p>
-					<div class="hero-actions">
-						<a class="btn btn-primary" href="https://app.capturaelmomento.com">Crear mi evento</a>
-						<a class="btn btn-secondary" href="#como-funciona">Ver como funciona</a>
-					</div>
-					<ul class="hero-proof" aria-label="Ventajas principales">
-						<li>Fotos de invitados centralizadas</li>
-						<li>Subida rapida desde movil con QR</li>
-						<li>Experiencia simple y elegante</li>
-					</ul>
+	<header class="hero section" id="hero-top">
+		<div class="container hero-grid">
+			<div class="hero-copy">
+				<span class="eyebrow">Álbum compartido con QR para bodas y eventos</span>
+				<h1>La app para recopilar fotos de invitados en bodas y eventos con un QR.</h1>
+				<p class="hero-lead">
+					Captura el Momento te ayuda a reunir las fotos de una boda o cualquier evento en un
+					solo álbum compartido, sin WhatsApp, sin carpetas dispersas y sin instalar una app
+					complicada.
+				</p>
+				<p class="hero-support">
+					Crea el evento, comparte el QR o el enlace y deja que tus invitados suban fotos desde
+					el móvil mientras tú mantienes todos los recuerdos del evento ordenados y accesibles.
+				</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="https://app.capturaelmomento.com">Crear mi evento</a>
+					<a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona</a>
 				</div>
-				<div class="hero-panel card">
-					<div class="hero-panel-top">
-						<p class="panel-label">Vista del evento</p>
-						<strong>Album activo y listo para compartir</strong>
-					</div>
-					<div class="phone-frame">
+				<ul class="hero-proof" aria-label="Ventajas principales">
+					<li>Fotos de invitados en un solo lugar</li>
+					<li>Subida rápida desde el móvil con QR</li>
+					<li>Sin instalar una app complicada</li>
+				</ul>
+			</div>
+			<div class="hero-panel card" aria-label="Vista previa del álbum del evento">
+				<div class="hero-panel-top">
+					<p class="panel-label">Vista del evento</p>
+					<strong>Álbum activo y listo para compartir</strong>
+				</div>
+				<div class="phone-frame">
+					<div class="phone-top">
 						<div class="qr-badge">QR + enlace listos para tus invitados</div>
 						<div class="upload-card">
 							<span>Fotos de invitados</span>
 							<strong>11</strong>
 						</div>
-						<div class="photo-stack" aria-hidden="true">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
 					</div>
-					<div class="stats-grid">
-						<div>
-							<span>Album compartido</span>
-							<strong>Activo</strong>
-						</div>
-						<div>
-							<span>Acceso para invitados</span>
-							<strong>Por QR</strong>
-						</div>
+					<div class="photo-stack" aria-hidden="true">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				<div class="stats-grid">
+					<div>
+						<span>Álbum compartido</span>
+						<strong>Activo</strong>
+					</div>
+					<div>
+						<span>Acceso para invitados</span>
+						<strong>Por QR</strong>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</header>
 
-		<section class="section" id="como-funciona">
+	<main>
+		<section class="section" id="como-funciona" aria-labelledby="como-funciona-title">
 			<div class="container">
 				<div class="section-heading">
-					<span class="eyebrow">Como funciona</span>
-					<h2>Como recopilar fotos de invitados sin complicar a nadie.</h2>
+					<span class="eyebrow">Cómo funciona</span>
+					<h2 id="como-funciona-title">Cómo recopilar fotos de invitados sin complicar a nadie.</h2>
 					<p>
-						El proceso esta pensado para convertir una accion que suele ser caotica en una
-						experiencia clara: crear, compartir y recibir fotos del evento en un mismo lugar.
+						El proceso está pensado para convertir una tarea que suele ser caótica en algo claro:
+						crear, compartir y recibir fotos del evento en un mismo sitio.
 					</p>
 				</div>
 
@@ -255,45 +261,69 @@ const websiteSchema = {
 			</div>
 		</section>
 
-		<section class="section seo-wedding-section" id="bodas">
-			<div class="container wedding-layout">
-				<div class="section-heading">
-					<span class="eyebrow">Especial bodas</span>
-					<h2>Recoger fotos de los invitados de una boda sin perseguir a nadie despues.</h2>
-					<p>
-						En muchas bodas pasa lo mismo: los novios saben que hay fotos preciosas en los moviles de
-						los invitados, pero pedirlas una a una por WhatsApp resulta lento, incomodo y poco
-						efectivo.
-					</p>
-				</div>
-				<div class="card wedding-card">
-					<p>
-						Con Captura el Momento, compartes un QR durante la boda y cada invitado puede subir fotos
-						desde el movil al momento. Asi consigues un album compartido mas completo, con momentos
-						espontaneos que normalmente no llegan al final.
-					</p>
-					<p>
-						La ventaja no es solo tecnica. Tambien mejora la experiencia: menos mensajes despues del
-						evento, menos archivos desperdigados y una forma mas natural de recopilar recuerdos del dia.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="section events-section" id="eventos">
+		<section class="section benefits-section" id="beneficios" aria-labelledby="beneficios-title">
 			<div class="container">
 				<div class="section-heading">
-					<span class="eyebrow">Para que eventos sirve</span>
-					<h2>Una solucion pensada para bodas, celebraciones y eventos donde cada invitado aporta recuerdos.</h2>
+					<span class="eyebrow">Beneficios</span>
+					<h2 id="beneficios-title">Una forma más elegante de recoger fotos del evento.</h2>
 					<p>
-						Si hay personas haciendo fotos con su movil, hay una oportunidad clara de reunir esos
-						momentos en un album compartido bien organizado.
+						La propuesta mejora tanto la experiencia de quien organiza como la de quien comparte:
+						menos fricción, más participación y mejores recuerdos reunidos en el mismo lugar.
 					</p>
 				</div>
 
 				<div class="grid benefits-grid">
 					{
-						eventTypes.map((eventType) => (
+						benefits.map((benefit) => (
+							<article class="card benefit-card">
+								<h3>{benefit.title}</h3>
+								<p>{benefit.description}</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="section seo-wedding-section" id="bodas" aria-labelledby="bodas-title">
+			<div class="container wedding-layout">
+				<div class="section-heading">
+					<span class="eyebrow">Especial bodas</span>
+					<h2 id="bodas-title">Recoger fotos de los invitados de una boda sin perseguir a nadie después.</h2>
+					<p>
+						En muchas bodas pasa lo mismo: los novios saben que hay fotos preciosas en los móviles
+						de los invitados, pero pedirlas una a una por WhatsApp resulta lento, incómodo y poco
+						efectivo.
+					</p>
+				</div>
+				<div class="card wedding-card">
+					<p>
+						Con Captura el Momento, compartes un QR durante la boda y cada invitado puede subir
+						fotos desde el móvil al momento. Así consigues un álbum compartido más completo, con
+						miradas espontáneas que normalmente no llegan al final.
+					</p>
+					<p>
+						La ventaja no es solo técnica. También mejora la experiencia posterior: menos mensajes,
+						menos archivos desperdigados y una forma más natural de recopilar recuerdos del gran día.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section events-section" id="celebraciones" aria-labelledby="celebraciones-title">
+			<div class="container">
+				<div class="section-heading">
+					<span class="eyebrow">Cumpleaños, fiestas y comuniones</span>
+					<h2 id="celebraciones-title">También funciona muy bien en celebraciones privadas y eventos familiares.</h2>
+					<p>
+						Si varias personas están haciendo fotos con el móvil, tiene sentido reunir esos
+						recuerdos del evento en un álbum digital compartido y fácil de usar.
+					</p>
+				</div>
+
+				<div class="grid benefits-grid">
+					{
+						privateEventTypes.map((eventType) => (
 							<article class="card benefit-card">
 								<h3>{eventType.title}</h3>
 								<p>{eventType.description}</p>
@@ -304,14 +334,14 @@ const websiteSchema = {
 			</div>
 		</section>
 
-		<section class="section compare-section" id="ventajas">
+		<section class="section compare-section" id="comparativa" aria-labelledby="comparativa-title">
 			<div class="container">
 				<div class="section-heading">
-					<span class="eyebrow">Ventajas frente a pedir fotos por WhatsApp</span>
-					<h2>Mas orden, mas participacion y menos friccion antes, durante y despues del evento.</h2>
+					<span class="eyebrow">Ventajas frente a WhatsApp y otras alternativas</span>
+					<h2 id="comparativa-title">Más orden, más participación y menos fricción antes, durante y después del evento.</h2>
 					<p>
-						Cuando facilitas el acceso con un QR y un flujo simple, recopilar recuerdos deja de ser
-						una tarea pendiente y pasa a formar parte natural del evento.
+						Cuando facilitas el acceso con un QR y un flujo claro, recopilar fotos deja de ser una
+						tarea pendiente y pasa a formar parte natural del propio evento.
 					</p>
 				</div>
 
@@ -328,15 +358,16 @@ const websiteSchema = {
 			</div>
 		</section>
 
-		<section class="section promo-section" id="promo">
+		<section class="section promo-section" id="promo" aria-labelledby="promo-title">
 			<div class="container">
 				<div class="promo-banner card">
 					<div>
-						<p class="pricing-kicker">Promocion de lanzamiento</p>
-						<h2>Pruebalo en tu proximo evento con acceso promocional.</h2>
+						<p class="pricing-kicker">Promoción de lanzamiento</p>
+						<h2 id="promo-title">Prueba la experiencia en tu próximo evento.</h2>
 						<p>
-							La propuesta principal de la pagina ya es evergreen. Si quieres aprovechar la etapa de
-							lanzamiento, puedes empezar ahora y validar la experiencia en un evento real.
+							La propuesta principal de la página es evergreen. Si quieres aprovechar una oferta o
+							promoción puntual, este es el lugar adecuado para comunicarla sin convertirla en el eje
+							del contenido indexable.
 						</p>
 					</div>
 					<a class="btn btn-primary" href="https://app.capturaelmomento.com">Quiero probarla</a>
@@ -344,14 +375,14 @@ const websiteSchema = {
 			</div>
 		</section>
 
-		<section class="section faq-section" id="faq">
+		<section class="section faq-section" id="faq" aria-labelledby="faq-title">
 			<div class="container faq-layout">
 				<div class="section-heading">
 					<span class="eyebrow">Preguntas frecuentes</span>
-					<h2>Respuestas claras sobre albumes compartidos con QR para bodas y eventos.</h2>
+					<h2 id="faq-title">Respuestas claras sobre fotos de invitados, QR y álbumes compartidos.</h2>
 					<p>
-						Esta FAQ ayuda a resolver dudas reales de quienes buscan una forma simple de recopilar
-						fotos de invitados y, ademas, refuerza la comprension semantica de la pagina.
+						Esta FAQ resuelve dudas reales de quienes buscan una alternativa a pedir fotos por
+						WhatsApp y refuerza la semántica SEO de la landing.
 					</p>
 				</div>
 				<div class="faq-list">
@@ -367,19 +398,19 @@ const websiteSchema = {
 			</div>
 		</section>
 
-		<section class="section final-cta" id="cta-final">
+		<section class="section final-cta" id="cta-final" aria-labelledby="cta-final-title">
 			<div class="container">
 				<div class="card cta-card">
 					<div>
 						<span class="eyebrow">Listo para recopilar recuerdos mejor</span>
-						<h2>Haz que las fotos de tus invitados terminen donde deben: en tu album compartido.</h2>
+						<h2 id="cta-final-title">Haz que las fotos de tus invitados terminen donde deben: en tu álbum compartido.</h2>
 						<p>
-							Crea tu evento, comparte el QR y deja que cada persona suba fotos desde el movil de
-							forma natural, sin friccion y sin perder momentos valiosos.
+							Crea tu evento, comparte el QR y deja que cada persona suba fotos desde el móvil de
+							forma natural, sin fricción y sin perder momentos valiosos por el camino.
 						</p>
 					</div>
 					<div class="cta-actions">
-						<a class="btn btn-primary" href="https://app.capturaelmomento.com">Entrar en la app</a>
+						<a class="btn btn-primary" href="https://app.capturaelmomento.com">Crear mi álbum</a>
 						<a class="btn btn-secondary" href="#hero-top">Volver arriba</a>
 					</div>
 				</div>
@@ -391,13 +422,14 @@ const websiteSchema = {
 		<div class="container footer-content">
 			<div>
 				<a class="footer-brand" href="/">Captura el Momento</a>
-				<p>Recopila fotos de invitados en bodas y eventos con un QR y un album compartido.</p>
+				<p>Recopila fotos de invitados en bodas y eventos con un QR y un álbum compartido.</p>
 			</div>
-			<nav aria-label="Navegacion secundaria" class="footer-nav">
-				<a href="#como-funciona">Como funciona</a>
+			<nav aria-label="Navegación secundaria" class="footer-nav">
+				<a href="#como-funciona">Cómo funciona</a>
+				<a href="#beneficios">Beneficios</a>
 				<a href="#bodas">Bodas</a>
-				<a href="#eventos">Eventos</a>
-				<a href="#ventajas">Ventajas</a>
+				<a href="#celebraciones">Celebraciones</a>
+				<a href="#comparativa">Comparativa</a>
 				<a href="#faq">FAQ</a>
 			</nav>
 		</div>
@@ -422,7 +454,7 @@ const websiteSchema = {
 		font-size: clamp(3rem, 6vw, 5.2rem);
 		line-height: 0.96;
 		letter-spacing: -0.04em;
-		max-width: 11ch;
+		max-width: 12ch;
 	}
 
 	.hero-copy p {
@@ -525,13 +557,14 @@ const websiteSchema = {
 	}
 
 	.qr-badge {
-		max-width: max-content;
+		max-width: 100%;
 	}
 
-	.upload-card {
-		position: absolute;
-		top: 1.35rem;
-		right: 1.35rem;
+	.phone-top {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.9rem;
+		align-items: start;
 	}
 
 	.upload-card strong {
@@ -543,7 +576,7 @@ const websiteSchema = {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 1rem;
-		margin-top: 3rem;
+		margin-top: 1.75rem;
 	}
 
 	.photo-stack div {
@@ -648,6 +681,7 @@ const websiteSchema = {
 		font-size: 1.4rem;
 	}
 
+	.benefits-section,
 	.events-section,
 	.compare-section {
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
@@ -802,9 +836,8 @@ const websiteSchema = {
 			min-height: auto;
 		}
 
-		.upload-card {
-			position: static;
-			margin-top: 1rem;
+		.phone-top {
+			grid-template-columns: 1fr;
 		}
 
 		.footer-content {
